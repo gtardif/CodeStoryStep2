@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		html, body { margin:0; padding:0; font-family: Verdana; }
+		header {background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#111));color:white; border:1px solid #ccc; border-left:0px; border-right:0px; margin-top:10px;padding:20px;  }
+		a { font-weight:bold; }
+		#main {padding:20px;}
+		.name { font-size:130%;font-weight:bold; }
+		.sellin, .quality { display:block; margin-left:20px; }
+	</style>
+</head>
+
+<body>
+	
+<header>
+	<hgroup>
+		<h1>Gilded Rose shop</h1>
+		<h2>List of items</h2>
+	</hgroup>
+</header>
+
+<div id="main">
+	<p>Number of items in shop : $nbItems$</p>
+	<a href="#" onclick="javascript:location.reload(true)">And on the next day...</a>
+	
+	
+	<ul>
+		$items: {item|
+			<li><span class="name">$item.name$</span>
+				<span class="sellin">Sell in $item.sellIn$ days</span>
+				<span class="quality">Quality is $item.quality$</span>
+			</li>
+		}$
+	</ul>
+	
+</div>
+</body>
+</html>
